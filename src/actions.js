@@ -36,3 +36,15 @@ export const actionsCreate = async ({ request }) => {
    // redirect to index
    return redirect("/")
 }
+
+//---------------------------
+// Delete Action
+//---------------------------
+
+export const actionsDelete = async ({params}) => {
+
+    await fetch(URL + "/artworks/" + params.id, {
+        method: "delete"
+    })
+    return redirect("/")
+}
