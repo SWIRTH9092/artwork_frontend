@@ -38,6 +38,33 @@ export const actionsCreate = async ({ request }) => {
 }
 
 //---------------------------
+// Update Action
+//---------------------------
+
+export const actionsUpdate = async ({request, params}) => {
+    const formData = await request.formData()
+
+    const updatedArtwork = {
+        subject: formData.get("subject"),
+        category: formData.get("category"),
+        comments: formData.get("comments"),
+        image_url: formData.get("image_url")
+    }
+    console.log("updated artwork", updatedArtwork)
+    console.log("fetch url:", URL + "/artworks/" + params.id + "/")
+    await fetch(URL + "/artworks/" + params.id + "/", {
+        method: "put",
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(updatedArtwork)
+    })
+
+    return redirect("/")
+}
+
+
+//---------------------------
 // Delete Action
 //---------------------------
 
