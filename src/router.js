@@ -7,7 +7,7 @@ import App from "./App"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
 
-import { indexLoader } from "./loaders"
+import { indexLoader, showLoader } from "./loaders"
 
 //---------------------------------------
 //   Router Paths
@@ -17,7 +17,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <>
         <Route path="/" element={<App/>}>
             <Route path="" element={<Index/>} loader={indexLoader}/>
-            <Route path=":id" element={<Show/>}/>
+            <Route path=":id" element={<Show/>} loader={showLoader}/>
             <Route path="create"/>
             <Route path="update/:id"/>
             <Route path="delete/:id"/>

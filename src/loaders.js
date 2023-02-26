@@ -8,8 +8,8 @@ const URL = "https://sw-artworks-bkend.onrender.com";
 
 export const indexLoader = async () => {
     const response = await fetch(URL + "/artworks/")
-    const places = await response.json()
-    return places
+    const artworks = await response.json()
+    return artworks
 }
 
 //----------------------
@@ -18,6 +18,7 @@ export const indexLoader = async () => {
 
 export const showLoader = async ({params}) => {
     const response = await fetch(URL + "/artworks/" + params.id)
-    const places = await response.json()
-    return places
+    const artwork = await response.json()
+    console.log("artworks:", artwork)
+    return artwork
 }
