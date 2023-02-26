@@ -7,7 +7,7 @@
 const URL = "https://sw-artworks-bkend.onrender.com";
 
 export const indexLoader = async () => {
-    const response = await fetch(URL + "/artworks")
+    const response = await fetch(URL + "/artworks/")
     const places = await response.json()
     return places
 }
