@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.colorpalette {
+  color: #0B2027;
+  color: #40798C;
+  color: #70A9A1;
+  color: #CFD7C7;
+  color: #F6F1D1;
+}
+
