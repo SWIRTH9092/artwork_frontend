@@ -85,9 +85,11 @@ function Index (props) {
     const createFormButton = {
       fontSize: "1.40rem",
       width: "23rem",
-      background: "#0B2027",
+      background: "#40798C",
       color: "#F6F1D1",
-      borderRadius: "10px"
+      borderRadius: "10px",
+      border: "5px solid #0B2027",
+
     }
     const deleteFormButton = {
       fontSize: "1.40rem",
