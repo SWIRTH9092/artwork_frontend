@@ -31,13 +31,20 @@ function Index (props) {
       color: "#0B2027"
     }
 
+    const transistionContainer = {
+      textAlign: "center",
+      backgroundColor: "#70A9A1", 
+      color: "#0B2027"   
+    }
     const artworkContainer = {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(14rem, max-content))",
       gridGap: "16px",
-      justifyContent: "center"
+      justifyContent: "center",
+      backgroundColor: "#70A9A1"
     }
     
+
     const artworkCard = {
       border: "5px solid black",
       borderRadius: "20px",
@@ -120,9 +127,14 @@ function Index (props) {
               <br></br>
               <br></br>
             </div>
+            <div style={transistionContainer}>
+                <br></br>
+                <br></br>
+                <h1>The Collection</h1>
+                <br></br>
+                <br></br>
+            </div>
             <div>
-            <br></br>
-            <br></br>
                 <div style={artworkContainer}>
                   {artworks.map(artwork => (
                     <div key={artwork.id} style={artworkCard}>
@@ -136,6 +148,11 @@ function Index (props) {
                   ))}
                 </div>
               </div>
+              <div style={transistionContainer}>
+                <br></br>
+                <br></br>
+                <br></br>
+            </div>
         </div>
     )
 }
