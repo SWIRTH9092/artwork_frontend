@@ -19,6 +19,5 @@ export const indexLoader = async () => {
 export const showLoader = async ({params}) => {
     const response = await fetch(URL + "/artworks/" + params.id)
     const artwork = await response.json()
-    console.log("artworks:", artwork)
     return artwork
 }
