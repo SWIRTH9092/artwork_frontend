@@ -33,9 +33,9 @@ function Show(props) {
 
     const createFormButton = {
       fontSize: "1.40rem",
-      color: "white",
+      color: "#F6F1D1",
       width: "23rem",
-      background: "rgb(25, 25, 25)",
+      background: "#0B2027",
       borderRadius: "10px"
     }
     return (
