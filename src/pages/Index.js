@@ -89,7 +89,24 @@ function Index (props) {
       color: "#F6F1D1",
       borderRadius: "10px"
     }
+    const deleteFormButton = {
+      fontSize: "1.40rem",
+      width: "180px",
+      background: "#0B2027",
+      color: "#F6F1D1",
+      border: "5px solid red",
+      borderRadius: "10px"
+    }
     
+    const updateFormButton = {
+      fontSize: "1.40rem",
+      width: "180px",
+      background: "#40798C",
+      color: "#F6F1D1",
+      borderRadius: "10px",
+      border: "5px solid #0B2027",
+    }
+
     return (
         <div>
             <div style={addContainer}>
@@ -154,11 +171,19 @@ function Index (props) {
                           <img src={artwork.image_url} alt={artwork.subject} style={imageSize}/>
                         </div>
                         <div style={artworkTextContainer}>
-                          <Link to={`/${artwork.id}`}>
-                              <h2>{artwork.subject}</h2>
-                          </Link>
+                          <h3>{artwork.subject}</h3>
                           <h3>Category: {artwork.category}</h3>
+                        <br></br>
                         </div>
+                        <div>
+                          <Form action={`${artwork.id}`} >
+                            <input type="submit" style={updateFormButton} value="Update Artwork" />
+                          </Form>
+                          <br></br>
+                          <Form action={`/delete/${artwork.id}`} method="post" >
+                            <input type="submit" style={deleteFormButton} value="Delete Artwork" />
+                          </Form>
+                        </div>  
                         <br></br>
                     </div>
                   ))}
