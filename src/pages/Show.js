@@ -17,14 +17,12 @@ function Show(props) {
     const createForm = {
       fontSize: "1.25rem", 
       width: "20rem",
-      margin: ".5rem",
-      resize: "hortizontal"
+      margin: ".5rem"
     }
     const formLabel = {
       fontSize: "1.25rem", 
       width: "20rem",
       margin: ".5rem",
-      resize: "hortizontal",
       fontWeight:  "bold"    
     }
     const artworkResize = {

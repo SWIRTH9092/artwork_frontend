@@ -33,7 +33,7 @@ function Index (props) {
       border: "5px solid black",
       borderRadius: "20px",
       padding: "5px",
-      textAlign: "center"
+      textAlign: "center"  
     }
 
     const centerTitle = {
@@ -49,7 +49,7 @@ function Index (props) {
         width: "20rem",
         margin: ".5rem",
       }
-      
+    
     const formCenter = {
       textAlign: "center"
     }   
@@ -74,28 +74,28 @@ function Index (props) {
               }}
               action="/create" method="post">
 
-                <input type="input" name="subject" placeholder="subject" 
+                <input type="text" name="subject" placeholder="subject" 
                   value={subject} required style={createForm}
                   onChange={e => {
                     setSubject(e.target.value)
                   }}
                 />     
 
-                <input type="input" name="category" placeholder="category" 
+                <input type="text" name="category" placeholder="category" 
                   value={category} required style={createForm}
                   onChange={e => {
                     setCategory(e.target.value)
                   }}
                 />
 
-                <input type="input" name="comments" placeholder="comments" 
+                <input type="text" name="comments" placeholder="comments" 
                   value={comments} required style={createForm}
                   onChange={e => {
                     setComments(e.target.value)
                   }}
                 />
 
-                <input type="input" name="image_url" placeholder="image" 
+                <input type="text" name="image_url" placeholder="image" 
                   value={image_url} required style={createForm}
                   onChange={e => {
                     setImage_url(e.target.value)
