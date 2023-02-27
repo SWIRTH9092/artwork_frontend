@@ -7,31 +7,94 @@ function Show(props) {
     const artworkImage = {
       maxWidth: "300px"
     }
+    const ShowContainer = {
+      display: "flexbox",
+      justifyContent: "center",
+      textAlign: "center",
+      backgroundColor: "#F6F1D1",
+      color: "#0B2027"
+    }
+    const createForm = {
+      fontSize: "1.25rem", 
+      width: "20rem",
+      margin: ".5rem",
+      resize: "hortizontal"
+    }
+    const formLabel = {
+      fontSize: "1.25rem", 
+      width: "20rem",
+      margin: ".5rem",
+      resize: "hortizontal",
+      fontWeight:  "bold"    
+    }
+    const artworkResize = {
+      resize: "both"
+    }  
 
-    const showPage = {
-      textAlign: "center"
+    const createFormButton = {
+      fontSize: "1.40rem",
+      color: "white",
+      width: "23rem",
+      background: "rgb(25, 25, 25)",
+      borderRadius: "10px"
     }
     return (
-      <div style={showPage}>
-        <br></br>
-        <img src={artwork.image_url} alt={artwork.subject} style={artworkImage} />
-        <h1>{artwork.subject}</h1>
-        <h2>{artwork.category}</h2>
-        <h2>{artwork.comments}</h2>
+      <div>
+        <div style={ShowContainer}>
+          <br></br>
+          <h1>{artwork.subject}</h1>
+          <img src={artwork.image_url} alt={artwork.subject} style={artworkImage} />
 
-        <h2>Update {artwork.subject}</h2>
-        <Form action={`/update/${artwork.id}`} method="post"> 
-          <input type="input" name="subject" placeholder="subject" defaultValue={artwork.subject} required/>
-          <input type="input" name="category" placeholder="category" defaultValue={artwork.category} required/>
-          <input type="input" name="comments" placeholder="comments" defaultValue={artwork.comments} required/>
-          <input type="input" name="image_url" placeholder="url image address" defaultValue={artwork.image_url} required/>
-          <input type="submit" value={`update ${artwork.subject}`}/>
-        </Form>
-
-        <h2>Delete {artwork.subject}</h2>
-        <Form action={`/delete/${artwork.id}`} method="post">
-          <input type="submit" value={`delete ${artwork.subject}`} />
-        </Form>
+          <h2>Update {artwork.subject}</h2>
+          <div style={artworkResize}>
+            <Form action={`/update/${artwork.id}`} method="post"> 
+              <label style={formLabel}>  Subject:</label>
+              <input 
+                type="text" 
+                name="subject" 
+                placeholder="subject" 
+                style={createForm}
+                defaultValue={artwork.subject} 
+                required />
+              <br></br>  
+              <label style={formLabel}> Category:</label>
+              <input 
+                type="text" 
+                name="category" 
+                placeholder="category" 
+                style={createForm} 
+                defaultValue={artwork.category} 
+                required />
+              <br></br>
+              <label style={formLabel}>Comments:</label>
+              <input 
+                type="textarea" 
+                name="comments" 
+                placeholder="comments" 
+                style={createForm}defaultValue={artwork.comments} 
+                required />
+              <br></br>
+              <label style={formLabel}>Image URL:</label>
+              <input 
+                type="text" 
+                name="image_url" 
+                placeholder="url image address" 
+                style={createForm} 
+                defaultValue={artwork.image_url} 
+                required />
+              <br></br>
+              <br></br>            
+              <input type="submit" style={createFormButton} value={`Update ${artwork.subject}`} />
+            </Form>
+          </div>
+          <h2>Delete {artwork.subject}</h2>
+          <Form action={`/delete/${artwork.id}`} method="post">
+            <input type="submit" style={createFormButton} value={`delete ${artwork.subject}`} />
+          </Form>
+          <br></br>
+          <br></br> 
+          <br></br>
+        </div> 
       </div>
     )
   }
