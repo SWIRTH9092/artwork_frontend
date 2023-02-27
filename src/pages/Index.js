@@ -39,7 +39,7 @@ function Index (props) {
     const artworkContainer = {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(14rem, max-content))",
-      gridGap: "16px",
+      gridGap: "2.5rem",
       justifyContent: "center",
       backgroundColor: "#70A9A1"
     }
@@ -49,7 +49,19 @@ function Index (props) {
       border: "5px solid black",
       borderRadius: "20px",
       padding: "5px",
-      textAlign: "center"  
+      textAlign: "center",
+      backgroundColor: "#F6F1D1" 
+    }
+
+    const artworkImageContainer = {
+      display: "flexbox",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "200px",
+    }
+
+    const artworkTextContainer = {
+      width: "200px"
     }
 
     const centerTitle = {
@@ -138,11 +150,15 @@ function Index (props) {
                 <div style={artworkContainer}>
                   {artworks.map(artwork => (
                     <div key={artwork.id} style={artworkCard}>
-                        <img src={artwork.image_url} alt={artwork.subject} style={imageSize}/>
-                        <Link to={`/${artwork.id}`}>
-                            <h2>{artwork.subject}</h2>
-                        </Link>
-                        <h3>Category: {artwork.category}</h3>
+                        <div style={artworkImageContainer}>
+                          <img src={artwork.image_url} alt={artwork.subject} style={imageSize}/>
+                        </div>
+                        <div style={artworkTextContainer}>
+                          <Link to={`/${artwork.id}`}>
+                              <h2>{artwork.subject}</h2>
+                          </Link>
+                          <h3>Category: {artwork.category}</h3>
+                        </div>
                         <br></br>
                     </div>
                   ))}
