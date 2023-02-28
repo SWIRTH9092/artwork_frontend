@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+### Project 4 - Grandma's Artwork Collection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### Description
 
-## Available Scripts
+The purpose of this project is to display artwork that Grandma collected or made through the years.  
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##### Front End
+- Live Site Link: https://sw-artworks-frend.onrender.com
+- Github Link:  https://github.com/SWIRTH9092/artwork_frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Back End
+- Live Site Link: https://sw-artworks-bkend.onrender.com
+- Github Link: https://github.com/SWIRTH9092/artwork_backend
 
-### `npm test`
+##### Features
+- This application features a full crud app to be able to:
+    1. Show all Artworks
+    2. To be able to add an Artwork
+    3. To be able to show the information for one artwork
+    4. To be able to update the information for one artwork
+    5. To be able to delete the information for one artwork
+- Responsive Design
+- Calls an Python API backend for the data to display
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Trello Board 
+- Link:  https://trello.com/b/0dm5uokQ/grandmas-artwirj-collection
 
-### `npm run build`
+##### Wireframes
+<img src="https://i.imgur.com/AmOKKvx.jpg" alt="Wireframes for activity tracker" title="activity Tracker" width="100%"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Grandma's Artwork Collection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- website
+<img src="https://i.imgur.com/YakObTM.jpg" alt="website" title="website" width="100%"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- responsive
+<img src="https://i.imgur.com/iSIbWqk.jpg" alt="website" title="website" width="100%"/>
 
-### `npm run eject`
+##### Dependencies Used
+- Node
+- Express
+- React Router
+- React Router Dom
+- Styled Components
+- rest API backend for artwork data
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Activity Routes
+- index - "" 
+- show - id    
+- create - create/
+- update - update/:id
+- delete - delete/:id
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+##### Component Tree
+<img src="https://i.imgur.com/Rthjvri.jpg" alt="Front-end Component Tree" title="Component Tree" width="90%"/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Component List
+- App.js
+- actions.js
+    - actionsCreate
+    - actionsUpdate
+    - actionsDelete
+- components
+    - Header.js
+    - Footer.js
+- loaders.js
+    - indexLoader
+    - showLoader
+- router.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Stretch Goals
+- add authorization to application
